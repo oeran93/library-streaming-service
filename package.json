@@ -1,0 +1,23 @@
+{
+  "name": "library-streaming-service",
+  "version": "1.0.0",
+  "description": "Application to automatize streaming process. Allows communication between wowza and jwplayer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oeran93/library-streaming-service.git"
+  },
+  "author": "Nicola Pedretti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oeran93/library-streaming-service/issues"
+  },
+  "homepage": "https://github.com/oeran93/library-streaming-service#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "mongoose": "^4.8.2"
+  }
+}
