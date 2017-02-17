@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous">
+</script>
+
+<script>
+function submit() {
+  console.log('post')
+  $.ajax({
+    url:'/video/create',
+    type: 'post',
+    data: {username: 'nic'},
+    success: (data) => {
+      console.log(data)
+    }
+  })
+}
+</script>
+
+<a href='#' onclick='submit()' > Hello </a>
+
+</body>
+</html>
+
+<!-- <form method='post' action="#">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse">
+  <br><br>
+  <input type="submit" value="Submit" onclick='submit()'>
+</form> -->
