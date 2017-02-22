@@ -1,14 +1,12 @@
-const http = require('http')
-const jwtools = require('../../tools/jwplayer.js')()
-const axios = require('axios')
+const jwtools = require('../../tools/jwplayer/index.js')({api_key: 'TCZkoYFj', api_secret: 'qISqUKnbFiy6GwMuimuN3W8g'})
 
 module.exports = {
 
 	create_video: function (req, res) {
-    axios({
+    jwtools.call_api({
       method: 'post',
-      url: jwtools.get_api_call('/v1/videos/create', {title: 'a random title', download_url: 'https://mysite.net/videos/myVideo.mp4'})
-    })
+      path: '/v1/videos/create',
+    }, req.body.data)
     .then(({data}) => res.send(data))
     .catch(err => console.log(err))
   }

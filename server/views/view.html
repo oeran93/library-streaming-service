@@ -1,15 +1,3 @@
-
-
-<!-- <form method='post' action="#">
-  First name:<br>
-  <input type="text" name="firstname" value="Mickey">
-  <br>
-  Last name:<br>
-  <input type="text" name="lastname" value="Mouse">
-  <br><br>
-  <input type="submit" value="Submit" onclick='submit()'>
-</form> -->
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,10 +5,6 @@
     <title>Streaming Reserves</title>
     <script src="js/jwplayer.js"></script>
     <script>jwplayer.key = "UsAbh+H0EIus1QAay94tDANQsnbPuE3wRYonzXdAwok=";</script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous">
-    </script>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style type="text/css">
       @charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}
@@ -56,7 +40,7 @@
       <div id="product-bar-wrapper">
         <div class="container">
           <div id="product-bar" class="row">
-              <a href="http://hydraprod.wulib.wustl.edu/">University Libraries</a> - video upload
+              <a href="http://hydraprod.wulib.wustl.edu/">University Libraries</a>
           </div>
         </div>
       </div>
@@ -69,34 +53,32 @@
     </hgroup>
   </header>
   <div id="main" role="main" class="container ">
-    <br>
     <div class="row">
-      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-        <script>
-        function submit() {
-          console.log('post')
-          $.ajax({
-            url:'/videos/create',
-            type: 'post',
-            data: {url: 'khjjhk'},
-            success: (data) => {
-              console.log(data)
-            }
-          })
-        }
-        </script>
-        <div class="input-group">
-          <span class="input-group-addon" id="basic-addon1">Title</span>
-          <input type="text" class="form-control" aria-describedby="title">
-        </div>
+      <div class="col-md-12">
         <br>
-        <div class="input-group">
-          <span class="input-group-addon" id="basic-addon1">Url</span>
-          <input type="text" class="form-control" aria-describedby="url">
-        </div>
+        <p>
+          <div id="player"></div>
+          <script>
+            jwplayer("player").setup({
+            playlist: [{
+                     sources: [{
+                      file: "rtmp://128.252.67.12:1935/reserves/mp4:152257.mp4"
+                  },{
+                      file: "http://128.252.67.12:1935/reserves/mp4:152257.mp4/playlist.m3u8"
+                  }],
+                  mediaid: "eRJcp6ls"
+                  }],
+                  rtmp: {
+                     bufferlength: 3
+                  },
+                  fallback: true
+            });
+          </script>
+        </p>
       </div>
     </div>
   </div>
+
   <footer id="footer" class="container-fluid">
     <div id="footer-top-wrapper">
       <div id="footer-top" class="row">

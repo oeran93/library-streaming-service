@@ -1,7 +1,7 @@
 const express     = require('express')
 const app         = express()
 const body_parser = require('body-parser')
-const jwplayer_rooter = require('./rooter/jwplayer.js')
+const jwplayer_rooter = require('./routing/jwplayer.js')
 
 module.exports = function (db) {
   
