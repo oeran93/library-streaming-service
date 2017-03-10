@@ -2,7 +2,6 @@ const sha1 = require('sha1')
 const _ = require('underscore')
 const url_tools = require('url')
 const querystring = require('querystring')
-const crypto = require('crypto')
 
 module.exports = function (config = {}, priv = {}) {
 
