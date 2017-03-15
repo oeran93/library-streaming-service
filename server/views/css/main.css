@@ -41,6 +41,11 @@ h2 {
   display: none;
 }
 
-.main-container {
+.upload-container {
   width: 450px;
+  margin:20px auto;
+}
+
+.list-container {
+  margin: 20px auto;
 }

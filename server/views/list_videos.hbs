@@ -1,0 +1,30 @@
+<div class="row list-container">
+  <div class="col-xs-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Item ID</th>
+          <th>Title</th>
+          <th>Subtitles</th>
+          <th>Ares Course ID</th>
+          <th>Course Name</th>
+          <th>Semester</th>
+          <th>Instructor</th> 
+        </tr>
+      </thead>
+      <tbody>
+        {{#each videos}}
+          <tr>
+            <th scope="row">{{this.itemID}}</th>
+            <td>{{this.title}}</td>
+            <td>{{this.subtitles}}</td>
+            <td>{{this.ares_course_ID}}</td>
+            <td>{{this.course_name}}</td>
+            <td>{{this.semester}}</td>
+            <td>{{this.instructor}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

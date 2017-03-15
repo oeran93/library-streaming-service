@@ -6,7 +6,6 @@ module.exports = function () {
   let pub = {}
 
   pub.show = function (req,res) {
-    console.log(req.query.id)
     Video.findOne({obfuscated_itemID:req.query.id}, (err, video) => {
       if (err) console.log(err.message)
       if (!video) {

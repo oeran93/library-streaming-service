@@ -16,7 +16,7 @@ module.exports = function () {
       sql.connect(config, (err) => {
         new sql.Request()
         .input('itemID', sql.Int, movie_id)
-        .query('SELECT * FROM Items where ItemID = @itemID')
+        .query("SELECT ItemID, Title, Items.Description, Author, PubDate, Items.CourseID AS AresCourseID, Courses.Name AS CourseName, Courses.Semester, Courses.Instructor FROM Items JOIN Courses ON Items.CourseID = Courses.CourseID WHERE ItemID = @itemID")
         .then(resolve)
         .catch(reject)
       })
