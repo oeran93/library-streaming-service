@@ -19,7 +19,7 @@ module.exports = function (db) {
   app.use(express.static(__dirname + '/views'))
   jwplayer_router(app)
   video_router(app)
-
+  app.use((req,res) => {res.render('default')})
   return app
 
 }

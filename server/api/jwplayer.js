@@ -21,7 +21,7 @@ module.exports = {
         date: info.PubDate,
         sourcetype: 'url',
         sourceformat: 'mp4',
-        sourceurl: `rtmp://env.LSS_SERVER/reserves/${req.body.id}.mp4`
+        sourceurl: `rtmp://env.WOWZA_SERVER/reserves/${req.body.id}.mp4`
       })
       .then(data => {
         Video.update(

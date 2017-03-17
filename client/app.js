@@ -14,7 +14,7 @@ module.exports = function (db) {
   app.set('views', __dirname+ '/views')
   app.use(express.static(__dirname + '/views'))
   video_router(app)
-
+  app.use((req,res) => {res.render('not_found')})
   return app
 
 }

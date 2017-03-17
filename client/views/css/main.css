@@ -32,15 +32,7 @@ h2 {
   color: #68757E;
 }
 
-.panel {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-#upload-input {
-  display: none;
-}
-
-.main-container {
-  width: 450px;
+.central-big-text {
+  font-size: 35px;
+  padding: 150px;
 }
