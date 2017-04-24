@@ -31,7 +31,7 @@ module.exports = function (upload_path) {
   }
 
   pub.upload = function (req, res) {
-    res.render('new_video')    
+    res.render('new_video')
   }
 
   return pub

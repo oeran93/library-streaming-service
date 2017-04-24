@@ -21,5 +21,4 @@ module.exports = function (db) {
   video_router(app)
   app.use((req,res) => {res.render('default')})
   return app
-
 }
