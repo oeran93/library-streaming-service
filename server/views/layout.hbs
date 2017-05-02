@@ -1,22 +1,8 @@
-
-
-<!-- <form method='post' action="#">
-  First name:<br>
-  <input type="text" name="firstname" value="Mickey">
-  <br>
-  Last name:<br>
-  <input type="text" name="lastname" value="Mouse">
-  <br><br>
-  <input type="submit" value="Submit" onclick='submit()'>
-</form> -->
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Streaming Reserves</title>
-    <script src="js/jwplayer.js"></script>
-    <script>jwplayer.key = "UsAbh+H0EIus1QAay94tDANQsnbPuE3wRYonzXdAwok=";</script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
       crossorigin="anonymous">
@@ -27,7 +13,8 @@
     </style>
     <meta charset="utf-8">
     <title>Index Welcome // Blacklight</title>
-    <link rel="stylesheet" media="screen" href="css/application-096445a1727ec2e553d825578551bfd3ce197a995c9cd7b5.css">
+    <link rel="stylesheet" media="screen" href="../css/application-096445a1727ec2e553d825578551bfd3ce197a995c9cd7b5.css">
+    <link rel="stylesheet" href='../css/main.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="ng-scope">
@@ -39,7 +26,7 @@
             <div id="university" class="university col-md-6">
               <h3>
                 <a href="#" tabindex="-1">
-                  <img alt="Washington University in St. Louis" src="img/wustl-4-color-rev-shield-10e4f3d11d829fc3609da279e5433a53e80.svg">
+                  <img alt="Washington University in St. Louis" src="../img/wustl-4-color-rev-shield-10e4f3d11d829fc3609da279e5433a53e80.svg">
                 </a>
               </h3>
             </div>
@@ -56,7 +43,7 @@
       <div id="product-bar-wrapper">
         <div class="container">
           <div id="product-bar" class="row">
-              <a href="http://hydraprod.wulib.wustl.edu/">University Libraries</a> - video upload
+              <a href="http://hydraprod.wulib.wustl.edu/">University Libraries</a>
           </div>
         </div>
       </div>
@@ -68,34 +55,8 @@
       </div>
     </hgroup>
   </header>
-  <div id="main" role="main" class="container ">
-    <br>
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-        <script>
-        function submit() {
-          console.log('post')
-          $.ajax({
-            url:'/videos/create',
-            type: 'post',
-            data: {url: 'khjjhk'},
-            success: (data) => {
-              console.log(data)
-            }
-          })
-        }
-        </script>
-        <div class="input-group">
-          <span class="input-group-addon" id="basic-addon1">Title</span>
-          <input type="text" class="form-control" aria-describedby="title">
-        </div>
-        <br>
-        <div class="input-group">
-          <span class="input-group-addon" id="basic-addon1">Url</span>
-          <input type="text" class="form-control" aria-describedby="url">
-        </div>
-      </div>
-    </div>
+  <div role="main" class="main-container container">
+    {{{body}}}
   </div>
   <footer id="footer" class="container-fluid">
     <div id="footer-top-wrapper">
@@ -145,7 +106,7 @@
           <div class="col-md-3">
             <h3>Give to the Libraries</h3>
             <a href="https://gifts.wustl.edu/GiftForm.aspx?brd=Libraries">
-              <img src="img/CAM_Horz_CMYKplusCustRed_solid_pos.png" alt="" style="background:#fff; padding:5px">
+              <img src="../img/CAM_Horz_CMYKplusCustRed_solid_pos.png" alt="" style="background:#fff; padding:5px">
             </a>
           </div>
         </div>
@@ -169,5 +130,6 @@
       </div>
     </div>
   </div>
+  <script src="../js/main.js"> </script> <!-- import always at the end!! -->
 </body>
 </html>

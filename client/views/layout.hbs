@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Streaming Reserves</title>
-    <script src="js/jwplayer.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous">
+    </script>
+    <script src="jwplayer/jwplayer.js"></script>
     <script>jwplayer.key = "UsAbh+H0EIus1QAay94tDANQsnbPuE3wRYonzXdAwok=";</script>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style type="text/css">
@@ -13,6 +17,7 @@
     <title>Index Welcome // Blacklight</title>
     <link rel="stylesheet" media="screen" href="css/application-096445a1727ec2e553d825578551bfd3ce197a995c9cd7b5.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href='css/main.css'>
 </head>
 <body class="ng-scope">
   <header id="banner" role="banner">
@@ -52,33 +57,7 @@
       </div>
     </hgroup>
   </header>
-  <div id="main" role="main" class="container ">
-    <div class="row">
-      <div class="col-md-12">
-        <br>
-        <p>
-          <div id="player"></div>
-          <script>
-            jwplayer("player").setup({
-            playlist: [{
-                     sources: [{
-                      file: "rtmp://128.252.67.12:1935/reserves/mp4:152257.mp4"
-                  },{
-                      file: "http://128.252.67.12:1935/reserves/mp4:152257.mp4/playlist.m3u8"
-                  }],
-                  mediaid: "eRJcp6ls"
-                  }],
-                  rtmp: {
-                     bufferlength: 3
-                  },
-                  fallback: true
-            });
-          </script>
-        </p>
-      </div>
-    </div>
-  </div>
-
+  {{{body}}}
   <footer id="footer" class="container-fluid">
     <div id="footer-top-wrapper">
       <div id="footer-top" class="row">
