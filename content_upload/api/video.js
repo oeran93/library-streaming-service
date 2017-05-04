@@ -27,7 +27,7 @@ module.exports = function (upload_path) {
   pub.list = function (req, res) {
     Video.find({}, (err, videos) =>{
       if (err) res.status(500)
-      else res.render('list_videos', {videos, server: env.WOWZA_SERVER})
+      else res.render('list_videos', {videos, server: 'hydrademo.wulib.wustl.edu'})
     })
   }
 

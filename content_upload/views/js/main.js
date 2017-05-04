@@ -22,7 +22,9 @@ function upload_video (formData) {
     data: formData,
     processData: false,
     contentType: false,
-    success: (data) => {},
+    success: (data) => {
+      $('.list_videos_btn').toggle()
+    },
     xhr: () => {
       var xhr = new XMLHttpRequest()
       xhr.upload.addEventListener('progress', (evt) => {
