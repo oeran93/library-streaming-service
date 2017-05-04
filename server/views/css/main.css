@@ -36,6 +36,14 @@ h2 {
   padding: 150px;
 }
 
+.padding-top-20 {
+  padding-top:20px;
+}
+
+.padding-bottom-20 {
+  padding-bottom:20px;
+}
+
 .full-width {
   width:100%;
 }

@@ -13,15 +13,13 @@ module.exports = {
 			if (!records[0]) {
 				res.json({err: true})
 			} else {
-					let info = _.pick(records[0], 'Title', 'Description', 'Author', 'PubDate')
+					let info = _.pick(records[0], 'ItemID')
+					info.Title = `${info.ItemID}`
 					jwtools.call_api({
 						method: 'post',
 						path: '/v1/videos/create'
 					},{
 						title: info.Title || 'NoTitle',
-						description: info.Description || 'NoDescription',
-						author: info.Author || 'NoAuthor',
-						date: info.PubDate || 'NoPubDate',
 						sourcetype: 'url',
 						sourceformat: 'mp4',
 						sourceurl: `rtmp://${env.WOWZA_SERVER}/reserves/${req.body.id}.mp4`
@@ -31,7 +29,7 @@ module.exports = {
 							{itemID: records[0].ItemID},
 							{
 								itemID: req.body.id,
-								mediaID: data.data.media.key,
+								mediaID: data.data.video.key,
 								obfuscated_itemID: sha1(req.body.id),
 								title: records[0].Title,
 								subtitles: records[0].Subtitles,

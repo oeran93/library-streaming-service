@@ -2,6 +2,7 @@ const formidable = require('formidable')
 const path = require('path')
 const fs = require('fs')
 const Video = require('../../database/video.js')
+const env = process.env
 
 module.exports = function (upload_path) {
 
@@ -26,7 +27,7 @@ module.exports = function (upload_path) {
   pub.list = function (req, res) {
     Video.find({}, (err, videos) =>{
       if (err) res.status(500)
-      else res.render('list_videos', {videos})
+      else res.render('list_videos', {videos, server: env.WOWZA_SERVER})
     })
   }
 

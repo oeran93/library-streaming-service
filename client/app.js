@@ -11,10 +11,10 @@ module.exports = function (db) {
     layoutsDir: __dirname+ '/views'
   }))
   app.set('view engine', '.hbs')
-  app.set('views', __dirname+ '/views')
+  app.set('views', __dirname + '/views')
   app.use(express.static(__dirname + '/views'))
   video_router(app)
-  app.use((req,res) => {res.render('not_found')})
+  app.use((req,res) => res.redirect('http://streamingreserves.wulib.wustl.edu/'))
   return app
 
 }

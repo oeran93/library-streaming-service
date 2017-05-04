@@ -9,10 +9,10 @@ module.exports = function () {
     Video.findOne({obfuscated_itemID:req.query.id}, (err, video) => {
       if (err) console.log(err.message)
       if (!video) {
-        res.render('not_found')
+        res.redirect('/not_found')
         return
       }
-      res.render('video', {itemID: video.itemID, mediaID: video.mediaID})
+      res.render('video', {itemID: video.itemID, mediaID: video.mediaID, title: video.title})
     })
   }
 
