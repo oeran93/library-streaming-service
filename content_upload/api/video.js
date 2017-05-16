@@ -35,6 +35,13 @@ module.exports = function (upload_path) {
     res.render('new_video')
   }
 
+  pub.delete = function (req, res) {
+    Video.remove({mediaID: req.body.id}, err => {
+      if (err) res.send({error: true})
+      else res.send({error: false})
+    })
+  }
+
   return pub
 
 }

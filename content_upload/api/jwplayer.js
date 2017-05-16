@@ -48,6 +48,18 @@ module.exports = {
 				}
 	    })
 	    .catch(err => console.log('external_db err: ', err))
-  }
+  },
+
+	delete_video: function (req,res) {
+		console.log(req.body)
+		jwtools.call_api({
+			method: "post",
+			path: "/v1/videos/delete"
+		},{
+			video_key: ""+req.body.video_key+""
+		})
+		.then(data => {console.log(data);res.send({error: false})} )
+		.catch(data => {console.log(data); res.send({error: true})} )
+	}
 
 }
