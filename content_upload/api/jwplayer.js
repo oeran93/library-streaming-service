@@ -51,7 +51,6 @@ module.exports = {
   },
 
 	delete_video: function (req,res) {
-		console.log(req.body)
 		jwtools.call_api({
 			method: "post",
 			path: "/v1/videos/delete"
