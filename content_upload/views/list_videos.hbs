@@ -61,7 +61,7 @@ function delete_confirmation (id) {
               <td>{{this.course_name}}</td>
               <td>{{this.semester}}</td>
               <td>{{this.instructor}}</td>
-              <td><button class="btn btn-info" onClick="window.prompt('Shareable ULR','http://{{../server}}/video?id={{this.obfuscated_itemID}}')">Get Shareable URL</button></td>
+              <td><button class="btn btn-info" onClick="window.prompt('Press Ctrl-C to copy URL','http://{{../server}}/video?id={{this.obfuscated_itemID}}')">Show URL</button></td>
               <td><button class="btn btn-warning" onClick="delete_confirmation('{{this.mediaID}}')">Delete</button></td>
             </tr>
           {{/each}}
