@@ -8,7 +8,7 @@
           </div>
           <h2>Login</h2>
           <input id="name" type="text" class='form-input' placeholder="username" />
-          <input id="password" type="password" class='form-input' placeholder="password" />
+          <input id="password" type="password" class='form-input' placeholder="password"/>
           <button class='btn btn-default' onClick="login()">Login</button>
         </div>
       </div>
@@ -16,6 +16,11 @@
   </div>
 </div>
 <script>
+$('#name, #password').on('keypress', (e) => {
+  if (e.keyCode === 13) {
+    login()
+  }
+})
 function login() {
   $.ajax({
     method:"post",
