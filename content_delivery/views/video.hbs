@@ -1,25 +1,32 @@
-<div class="container">
+<div class="container page-container">
   <div class="row">
-    <h1>{{title}}</h1>
-    <br>
-    <p>
-      <div id="player"></div>
-      <script>
-        jwplayer("player").setup({
-          playlist: [{
-                   sources: [{
-                    file: "rtmp://128.252.67.12:1935/reserves/mp4:{{itemID}}.mp4"
-                },{
-                    file: "http://128.252.67.12:1935/reserves/mp4:{{itemID}}.mp4/playlist.m3u8"
-                }],
-                mediaid: "{{mediaID}}"
-          }],
-          rtmp: {
-             bufferlength: 3
-          },
-          fallback: true
-        });
-      </script>
-    </p>
+    <div class="col-xs-12 col-sm-7">
+      <h1>{{title}}</h1>
+      <h3>Course: {{course}}</h3>
+      <h3>Instructor: {{instructor}}</h3>
+      <p>
+        <div id="player"></div>
+        <script>
+          jwplayer("player").setup({
+            playlist: [{
+                     sources: [{
+                      file: "rtmp://128.252.67.12:1935/reserves/mp4:{{itemID}}.mp4"
+                  },{
+                      file: "http://128.252.67.12:1935/reserves/mp4:{{itemID}}.mp4/playlist.m3u8"
+                  }],
+                  mediaid: "{{mediaID}}"
+            }],
+            rtmp: {
+               bufferlength: 3
+            },
+            fallback: true
+          });
+        </script>
+      </p>
+    </div>
+    <div class="col-xs-12 col-sm-5">
+      <h1>Copyright Statement</h1>
+      <h3>This service is available for Washington University instructors and students only to be used in conjunction with course reserves. Material is subject to the copyright law of the United States (Title 17, U.S. Code). Individuals are prohibited from downloading, sharing, installing, and/or operating unauthorized media programs, applications, and devices in accordance with the Washington University Computer Use Policy, and any misconduct is subject to disciplinary action under the Student Judicial Code.</h3>
+    </div>
   </div>
 </div>

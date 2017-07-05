@@ -12,7 +12,7 @@ module.exports = function () {
         res.redirect('/not_found')
         return
       }
-      res.render('video', {itemID: video.itemID, mediaID: video.mediaID, title: video.title})
+      res.render('video', {itemID: video.itemID, mediaID: video.mediaID, title: video.title, course: video.course_name, instructor: video.instructor})
     })
   }
 

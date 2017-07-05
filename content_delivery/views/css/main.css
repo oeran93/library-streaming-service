@@ -36,3 +36,13 @@ h2 {
   font-size: 35px;
   padding: 150px;
 }
+
+
+
+.video-inside-container {
+  margin: 0 auto;
+}
+
+.page-container {
+  max-width:940px
+}
