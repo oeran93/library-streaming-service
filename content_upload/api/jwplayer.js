@@ -25,7 +25,7 @@ module.exports = {
 								method: 'post',
 								path: '/v1/videos/create'
 							},{
-								title: records[0].Title || 'NoTitle',
+								title: records[0].ItemID || 'NoTitle',
 								sourcetype: 'url',
 								sourceformat: 'mp4',
 								sourceurl: `rtmp://${env.WOWZA_SERVER}/reserves/${req.body.id}.mp4`

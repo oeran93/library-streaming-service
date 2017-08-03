@@ -1,4 +1,4 @@
-const AD = require('./active_directory.js')()
+const AD = require('./active_directory.js')('sradmin')
 
 module.exports = function (app) {
   app.post('/login', AD.login)
